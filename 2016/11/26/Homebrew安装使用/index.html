@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Homebrew安装与使用 | 啖火</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="简介Homebrew是MacOs下著名的包管理器，为软件包提供了非常方便的安装方式。Homebrew是根据ruby脚本来定义安装配置。Homebrew中文装置http://brew.sh/index_zh-cn.html">
+<meta name="keywords" content="随笔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Homebrew安装与使用">
+<meta property="og:url" content="http://yoursite.com/2016/11/26/Homebrew安装使用/index.html">
+<meta property="og:site_name" content="啖火">
+<meta property="og:description" content="简介Homebrew是MacOs下著名的包管理器，为软件包提供了非常方便的安装方式。Homebrew是根据ruby脚本来定义安装配置。Homebrew中文装置http://brew.sh/index_zh-cn.html">
+<meta property="og:updated_time" content="2016-12-06T05:34:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Homebrew安装与使用">
+<meta name="twitter:description" content="简介Homebrew是MacOs下著名的包管理器，为软件包提供了非常方便的安装方式。Homebrew是根据ruby脚本来定义安装配置。Homebrew中文装置http://brew.sh/index_zh-cn.html">
+  
+    <link rel="alternate" href="/atom.xml" title="啖火" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">啖火</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Homebrew安装使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/11/26/Homebrew安装使用/" class="article-date">
+  <time datetime="2016-11-26T02:43:37.000Z" itemprop="datePublished">2016-11-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Homebrew安装与使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>简介<br><a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">Homebrew</a>是MacOs下著名的包管理器，为软件包提供了非常方便的安装方式。Homebrew是根据ruby脚本来定义安装配置。<br>Homebrew中文装置<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">http://brew.sh/index_zh-cn.html</a></p>
+<a id="more"></a>
+<p>##安装<br>安装<a href="http://brew.sh/index_zh-cn.html" target="_blank" rel="external">Homebrew</a>是非常简单的只需要打开命令行将下面这句话复制到命令行中运行。Homebrew 将本机的/usr/local/ 目录初始化为Git的工作树，并将目录所有者变更为当前用户，也就是你当前所操作的用户，所以以后的操作都不再需要sudo，这是安全的。后面安装的软件包放到/usr/local/Cellar/目录里面<br><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></p>
+<p>##删除<br>删除和安装一样方便也是将下面的命令复制到命令行运行即可<br><code>ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)&quot;</code></p>
+<p>##使用</p>
+<ul>
+<li>查找软件包<br>  <code>brew search wget</code></li>
+<li>安装软件包<br>  <code>brew install wget</code></li>
+<li>查询已安装的软件包<br>  <code>brew list</code></li>
+<li>删除软件包<br><code>brew remove wget</code></li>
+<li>查看软件包信息<br><code>brew info wget</code></li>
+<li>列出软件包的依赖关系<br><code>brew deps wget</code></li>
+<li>列出过时的软件包<br><code>brew outdated</code></li>
+<li>更新brew<br><code>brew update</code></li>
+<li>查看哪些软件需要更新<br><code>brew outdated</code></li>
+<li>更新过时的软件包（全部或指定）<br><code>brew upgrade</code></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/11/26/Homebrew安装使用/" data-id="cj27hibqg0002ijtxikg6xt1e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/02/02/测试new命令/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          测试new命令
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Games/">Games</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PS3/">PS3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Games/" style="font-size: 10px;">Games</a> <a href="/tags/PS3/" style="font-size: 10px;">PS3</a> <a href="/tags/随笔/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">五月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/02/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/02/测试new命令/">测试new命令</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/26/Homebrew安装使用/">Homebrew安装与使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 啖火<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
